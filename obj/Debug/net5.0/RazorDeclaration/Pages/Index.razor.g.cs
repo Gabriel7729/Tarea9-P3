@@ -125,8 +125,50 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 8 "C:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea 9\Pages\Index.razor"
+#line 164 "C:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea 9\Pages\Index.razor"
       
+    //Strings de los Select
+    String provincia = "-- Sin seleccionar --";
+    String TipoSangre = "-- Sin seleccionar --";
+    String COVID = "-- Sin seleccionar --";
+
+    //Metodos para manejar los Selects
+    public void provincias(ChangeEventArgs e)
+    {
+        provincia = e.Value.ToString();
+    }
+
+    public void TipoDeSangre(ChangeEventArgs e)
+    {
+        TipoSangre = e.Value.ToString();
+    }
+
+    public void COVID19(ChangeEventArgs e)
+    {
+        COVID = e.Value.ToString();
+    }
+
+    void Put()
+    {
+
+    }
+
+    //Variables para el mapa
+    int zoom = 6;
+
+    //Metodo para manejar el mapa y colocar la Latitud y Longitud
+    void OnMapClick(GoogleMapClickEventArgs args)
+    {
+        NewVacunados.Latitud = args.Position.Lat;
+        NewVacunados.Longitud = args.Position.Lng;
+    }
+
+    void OnMarkerClick(RadzenGoogleMapMarker marker)
+    {
+
+    }
+
+    //Metodos para manejar la Base de Datos
     List<Vacunados> Vacunados = new List<Vacunados>();
     protected override async Task OnInitializedAsync()
     {
@@ -141,6 +183,10 @@ using Radzen.Blazor;
     public Vacunados NewVacunados { get; set; } = new Vacunados();
     private async Task AddNewVacunados()
     {
+        //Agrego los valores, seleccionados de los selects
+        NewVacunados.Provincia = provincia;
+        NewVacunados.TipoDeSangre = TipoSangre;
+        NewVacunados.COVID = COVID;
         await service.AddVacunadosAsync(NewVacunados);
         NewVacunados = new Vacunados();
         await RefreshVacunados();

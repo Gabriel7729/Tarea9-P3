@@ -2,10 +2,208 @@
 @inject VacunadosServices service
 
 <section class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 justify-content-center">
+            <h2 class="text-center"><strong>Registro de Vacunados en casa</strong></h2>
+            <br />
+            <EditForm Model="@NewVacunados" OnValidSubmit="AddNewVacunados">
+                <DataAnnotationsValidator />
+
+                <div class="form-group">
+                    <label for="Cedula">Cedula:</label>
+                    <input type="text" id="Cedula" class="form-control" @bind-value="@NewVacunados.Cedula" />
+                    <ValidationMessage For="@(() => NewVacunados.Cedula)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Nombre">Nombre:</label>
+                    <input type="text" id="Nombre" class="form-control" @bind="@NewVacunados.Nombre" />
+                    <ValidationMessage For="@(() => NewVacunados.Nombre)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Apellido">Apellido:</label>
+                    <input type="text" id="Apellido" class="form-control" @bind="@NewVacunados.Apellido" />
+                    <ValidationMessage For="@(() => NewVacunados.Apellido)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Teléfono">Teléfono:</label>
+                    <input type="text" id="Teléfono" class="form-control" @bind="@NewVacunados.Teléfono" />
+                    <ValidationMessage For="@(() => NewVacunados.Teléfono)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" class="form-control" @bind="@NewVacunados.Email" />
+                    <ValidationMessage For="@(() => NewVacunados.Email)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Fecha">Fecha:</label>
+                    <input type="date" id="Fecha" class="form-control" @bind="@NewVacunados.Fecha" />
+                    <ValidationMessage For="@(() => NewVacunados.Fecha)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Tipo de Sangre:</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="nam" @onchange="TipoDeSangre" style="width:36rem;">
+                        <option> -- Sin seleccionar -- </option>
+                        <option>O Negativo</option>
+                        <option>O Positivo</option>
+                        <option>A negativo</option>
+                        <option>A positivo</option>
+                        <option>B negativo</option>
+                        <option>B positivo</option>
+                        <option>AB negativo</option>
+                        <option>AB positivo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Provincia:</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="nam" @onchange="provincias" style="width:36rem;">
+                        <option> -- Sin seleccionar -- </option>
+                        <option>Azua</option>
+                        <option>Bahoruco</option>
+                        <option>Barahona</option>
+                        <option>Dajabón</option>
+                        <option>Distrito Nacional</option>
+                        <option>Duarte</option>
+                        <option>Elías Piña</option>
+                        <option>El Seibo</option>
+                        <option>Espaillat</option>
+                        <option>Hato Mayor</option>
+                        <option>Hermanas Mirabal</option>
+                        <option>Independencia</option>
+                        <option>La Altagracia</option>
+                        <option>La Romana</option>
+                        <option>La Vega</option>
+                        <option>María Trinidad Sánchez</option>
+                        <option>Monseñor Nouel</option>
+                        <option>Monte Cristi</option>
+                        <option>Monte Plata</option>
+                        <option>Pedernales</option>
+                        <option>Peravia</option>
+                        <option>Puerto Plata</option>
+                        <option>Samaná</option>
+                        <option>San José de Ocoa</option>
+                        <option>San Juan</option>
+                        <option>San Pedro de Macorís</option>
+                        <option>Sánchez Ramírez</option>
+                        <option>Santiago</option>
+                        <option>Santiago Rodríguez</option>
+                        <option>Santo Domingo</option>
+                        <option>Valverde</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Dirección">Dirección:</label>
+                    <input type="text" id="Dirección" class="form-control" @bind="@NewVacunados.Direccion" />
+                    <ValidationMessage For="@(() => NewVacunados.Direccion)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Latitud">Latitud:</label>
+                    <input type="number" id="Latitud" class="form-control" @bind-value="@NewVacunados.Latitud" />
+                    <ValidationMessage For="@(() => NewVacunados.Latitud)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Longitud">Longitud:</label>
+                    <input type="number" id="Longitud" class="form-control" @bind-value="@NewVacunados.Longitud" />
+                    <ValidationMessage For="@(() => NewVacunados.Longitud)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">¿Te ha dado COVID?</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="nam" @onchange="COVID19" style="width:36rem;">
+                        <option> -- Sin seleccionar -- </option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Justificacion">Justificacion:</label>
+                    <InputTextArea id="Justificacion" class="form-control" @bind-Value="@NewVacunados.Justificacion"></InputTextArea>
+                    <ValidationMessage For="@(() => NewVacunados.Justificacion)" />
+                </div>
+
+                <div class="text-center p-3 mb-3">
+                    <button class="btn btn-success" @onclick="AddNewVacunados">Registrarse</button>
+                </div>
+            </EditForm>
+
+        </div>
+
+        <div class="col-md-6">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <h3 class="text-center"><strong>Seleccione su Latitud y Longitud:</strong></h3>
+            <RadzenCard>
+                <RadzenGoogleMap style="height: 400px" Zoom=@zoom Center=@(new GoogleMapPosition() { Lat = 18.85609639745414, Lng = -71.0287898238766 }) MapClick=@OnMapClick MarkerClick=@OnMarkerClick>
+                    <Markers>
+                        @foreach (var Vacunado in Vacunados)
+                        {
+                            <RadzenGoogleMapMarker Title="@Vacunado.Nombre" Label="@Vacunado.Nombre" Position=@(new GoogleMapPosition() { Lat = Vacunado.Latitud, Lng = Vacunado.Longitud }) />
+                        }
+                    </Markers>
+                </RadzenGoogleMap>
+            </RadzenCard>
+        </div>
+
+    </div>
+
+    <br />
+
+
 
 </section>
 
 @code{
+    //Strings de los Select
+    String provincia = "-- Sin seleccionar --";
+    String TipoSangre = "-- Sin seleccionar --";
+    String COVID = "-- Sin seleccionar --";
+
+    //Metodos para manejar los Selects
+    public void provincias(ChangeEventArgs e)
+    {
+        provincia = e.Value.ToString();
+    }
+
+    public void TipoDeSangre(ChangeEventArgs e)
+    {
+        TipoSangre = e.Value.ToString();
+    }
+
+    public void COVID19(ChangeEventArgs e)
+    {
+        COVID = e.Value.ToString();
+    }
+
+    void Put()
+    {
+
+    }
+
+    //Variables para el mapa
+    int zoom = 6;
+
+    //Metodo para manejar el mapa y colocar la Latitud y Longitud
+    void OnMapClick(GoogleMapClickEventArgs args)
+    {
+        NewVacunados.Latitud = args.Position.Lat;
+        NewVacunados.Longitud = args.Position.Lng;
+    }
+
+    void OnMarkerClick(RadzenGoogleMapMarker marker)
+    {
+
+    }
+
+    //Metodos para manejar la Base de Datos
     List<Vacunados> Vacunados = new List<Vacunados>();
     protected override async Task OnInitializedAsync()
     {
@@ -20,6 +218,10 @@
     public Vacunados NewVacunados { get; set; } = new Vacunados();
     private async Task AddNewVacunados()
     {
+        //Agrego los valores, seleccionados de los selects
+        NewVacunados.Provincia = provincia;
+        NewVacunados.TipoDeSangre = TipoSangre;
+        NewVacunados.COVID = COVID;
         await service.AddVacunadosAsync(NewVacunados);
         NewVacunados = new Vacunados();
         await RefreshVacunados();

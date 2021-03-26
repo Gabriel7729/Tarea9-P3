@@ -116,7 +116,7 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/ListadoRegistros")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -125,18 +125,50 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea 9\Pages\Counter.razor"
+#line 51 "C:\Users\Lusan\Desktop\ITLA QUINTO CUATRIMESTRE\Programación 3 - Amadis Suarez\Tarea 9\Pages\Counter.razor"
        
-    private int currentCount = 0;
-
-    private void IncrementCount()
+    //Metodos para manejar la Base de Datos
+    List<Vacunados> Vacunados = new List<Vacunados>();
+    protected override async Task OnInitializedAsync()
     {
-        currentCount++;
+        await RefreshVacunados();
+    }
+
+    private async Task RefreshVacunados()
+    {
+        Vacunados = await service.GetVacunadosAsync();
+    }
+
+    public Vacunados NewVacunados { get; set; } = new Vacunados();
+    private async Task AddNewVacunados()
+    {
+        await service.AddVacunadosAsync(NewVacunados);
+        NewVacunados = new Vacunados();
+        await RefreshVacunados();
+    }
+
+    Vacunados UpdateVacunados = new Vacunados();
+    private void SetVacunadosForUpdate(Vacunados Vacunado)
+    {
+        UpdateVacunados = Vacunado;
+    }
+
+    private async Task UpdateVacunadosData()
+    {
+        await service.UpdateVacunadosAsync(UpdateVacunados);
+        await RefreshVacunados();
+    }
+
+    private async Task DeleteVacunados(Vacunados Vacunado)
+    {
+        await service.DeleteVacunadosAsync(Vacunado);
+        await RefreshVacunados();
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private VacunadosServices service { get; set; }
     }
 }
 #pragma warning restore 1591
