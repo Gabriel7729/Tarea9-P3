@@ -1,0 +1,45 @@
+﻿@page "/"
+@inject VacunadosServices service
+
+<section class="container-fluid">
+
+</section>
+
+@code{
+    List<Vacunados> Vacunados = new List<Vacunados>();
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshVacunados();
+    }
+
+    private async Task RefreshVacunados()
+    {
+        Vacunados = await service.GetVacunadosAsync();
+    }
+
+    public Vacunados NewVacunados { get; set; } = new Vacunados();
+    private async Task AddNewVacunados()
+    {
+        await service.AddVacunadosAsync(NewVacunados);
+        NewVacunados = new Vacunados();
+        await RefreshVacunados();
+    }
+
+    Vacunados UpdateVacunados = new Vacunados();
+    private void SetVacunadosForUpdate(Vacunados Vacunado)
+    {
+        UpdateVacunados = Vacunado;
+    }
+
+    private async Task UpdateVacunadosData()
+    {
+        await service.UpdateVacunadosAsync(UpdateVacunados);
+        await RefreshVacunados();
+    }
+
+    private async Task DeleteVacunados(Vacunados Vacunado)
+    {
+        await service.DeleteVacunadosAsync(Vacunado);
+        await RefreshVacunados();
+    }
+}
