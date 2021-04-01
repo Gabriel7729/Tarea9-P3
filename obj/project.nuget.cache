@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bKlVte/neTgmd2OB6K5nwTplZI48vlqZPfF9h1td5uFuTWSUP4RTETqZ6ZruF1xt/PWNgIIQw3rZowBF4HgKzw==",
+  "dgSpecHash": "zR5veoRwft4bCwrPRV0lajBFBYZe3GbQTXC7+FfT2xakSqZPVv3pJ2o5oYjJ81XPAwreuho5K7KjHk5QhkoZMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lusan\\Desktop\\ITLA QUINTO CUATRIMESTRE\\Programación 3 - Amadis Suarez\\Tarea 9\\Tarea 9.csproj",
+  "projectFilePath": "C:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Tarea 9.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lusan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lusan\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.0\\microsoft.aspnetcore.authorization.5.0.0.nupkg.sha512",
