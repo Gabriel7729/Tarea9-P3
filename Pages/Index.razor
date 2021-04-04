@@ -11,43 +11,43 @@
 
                 <div class="form-group">
                     <label for="Cedula">Cedula:</label>
-                    <InputText id="Cedula" class="form-control" @bind-value="@NewVacunados.Cedula" />
+                    <input id="Cedula" class="form-control" @bind="@Cedula" />
                     <ValidationMessage For="@(() => NewVacunados.Cedula)" />
                 </div>
 
                 <div class="form-group">
                     <label for="Nombre">Nombre:</label>
-                    <InputText id="Nombre" class="form-control" @bind-Value="@NewVacunados.Nombre" />
+                    <input id="Nombre" class="form-control" @bind="@Nombre" />
                     <ValidationMessage For="@(() => NewVacunados.Nombre)" />
                 </div>
 
                 <div class="form-group">
                     <label for="Apellido">Apellido:</label>
-                    <InputText id="Apellido" class="form-control" @bind-Value="@NewVacunados.Apellido" />
+                    <input id="Apellido" class="form-control" @bind="@Apellido" />
                     <ValidationMessage For="@(() => NewVacunados.Apellido)" />
                 </div>
 
                 <div class="form-group">
                     <label for="Teléfono">Teléfono:</label>
-                    <InputText id="Teléfono" class="form-control" @bind-Value="@NewVacunados.Teléfono" />
+                    <input id="Teléfono" class="form-control" @bind="@Teléfono" />
                     <ValidationMessage For="@(() => NewVacunados.Teléfono)" />
                 </div>
 
                 <div class="form-group">
                     <label for="Email">Email:</label>
-                    <InputText id="Email" class="form-control" @bind-Value="@NewVacunados.Email" />
+                    <input id="Email" class="form-control" @bind="@Email" />
                     <ValidationMessage For="@(() => NewVacunados.Email)" />
                 </div>
 
                 <div class="form-group">
                     <label for="Fecha">Fecha:</label>
-                    <InputDate id="Fecha" class="form-control" @bind-Value="@NewVacunados.Fecha" />
+                    <input id="Fecha" type="date" class="form-control" @bind="@Fecha" />
                     <ValidationMessage For="@(() => NewVacunados.Fecha)" />
                 </div>
 
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Tipo de Sangre:</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="nam" @onchange="TipoDeSangre" style="width:36rem;">
+                    <select class="form-control" id="exampleFormControlSelect1" name="nam" @onchange="TipoDeSangre">
                         <option> -- Sin seleccionar -- </option>
                         <option>O Negativo</option>
                         <option>O Positivo</option>
@@ -62,7 +62,7 @@
 
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Provincia:</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="nam" @onchange="provincias" style="width:36rem;">
+                    <select class="form-control" id="exampleFormControlSelect1" name="nam" @onchange="provincias">
                         <option> -- Sin seleccionar -- </option>
                         <option>Azua</option>
                         <option>Bahoruco</option>
@@ -100,7 +100,7 @@
 
                 <div class="form-group">
                     <label for="Dirección">Dirección:</label>
-                    <InputText id="Dirección" class="form-control" @bind-Value="@NewVacunados.Direccion" />
+                    <input id="Dirección" class="form-control" @bind="@Direccion"/>
                     <ValidationMessage For="@(() => NewVacunados.Direccion)" />
                 </div>
 
@@ -118,7 +118,7 @@
 
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">¿Te ha dado COVID?</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="nam" @onchange="COVID19" style="width:36rem;">
+                    <select class="form-control" id="exampleFormControlSelect1" name="nam" @onchange="COVID19" >
                         <option> -- Sin seleccionar -- </option>
                         <option>Si</option>
                         <option>No</option>
@@ -127,14 +127,17 @@
 
                 <div class="form-group">
                     <label for="Justificacion">Justificacion:</label>
-                    <InputTextArea id="Justificacion" class="form-control" @bind-Value="@NewVacunados.Justificacion"></InputTextArea>
+                    <input id="Justificacion" class="form-control" @bind="@Justificacion"></input>
                     <ValidationMessage For="@(() => NewVacunados.Justificacion)" />
                 </div>
 
+
                 <div class="text-center p-3 mb-3">
-                    <button class="btn btn-success" @onclick="AddNewVacunados">Registrarse</button>
+                    <button class="btn btn-success btn-block" @onclick="AddNewVacunados">Registrarse</button>
                 </div>
+
             </EditForm>
+          
 
         </div>
 
@@ -156,16 +159,41 @@
     </div>
 
     <br />
+    
 
 
 
 </section>
+<div class="alert alert-info text-center">@msj</div>
+
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center text-white p-3" style="background-color:black;color:white);">
+        Acerca de :
+        <a class="text-white" href="Aserca">Grupo super trabajador E</a>
+    </div>
+    <!-- Copyright -->
+</footer>
 
 @code{
     //Strings de los Select
     String provincia = "-- Sin seleccionar --";
     String TipoSangre = "-- Sin seleccionar --";
     String COVID = "-- Sin seleccionar --";
+
+    //String de los inputs
+    String Cedula = "";
+    String Nombre = "";
+    String Apellido = "";
+    String Teléfono = "";
+    String Email = "";
+    DateTime Fecha;
+    String Direccion = "";
+    String Justificacion = "";
+
+    String msj;
+
+
 
     //Metodos para manejar los Selects
     public void provincias(ChangeEventArgs e)
@@ -218,14 +246,49 @@
     public Vacunados NewVacunados { get; set; } = new Vacunados();
     private async Task AddNewVacunados()
     {
-        //Agrego los valores, seleccionados de los selects
-        NewVacunados.Provincia = provincia;
-        NewVacunados.TipoDeSangre = TipoSangre;
-        NewVacunados.COVID = COVID;
-        await service.AddVacunadosAsync(NewVacunados);
-        NewVacunados = new Vacunados();
-        await RefreshVacunados();
+        //Valida si la persona ya se registro
+        foreach (var Vacunado in Vacunados)
+        {
+            if(Vacunado.Cedula == Cedula)
+            {
+                msj = "Esta cedula ya esta registrada";
+                return;
+            }
+        }
+
+        //valida que los campos esten llenos
+        if (Cedula != "" || Nombre != "" || Apellido != "" || Teléfono != "" || Email != "" || Direccion != "")
+        {
+
+            //Agrego los valores, seleccionados de los selects
+            NewVacunados.Provincia = provincia;
+            NewVacunados.TipoDeSangre = TipoSangre;
+            NewVacunados.COVID = COVID;
+
+            NewVacunados.Cedula = Cedula;
+            NewVacunados.Nombre = Nombre;
+            NewVacunados.Apellido = Apellido;
+            NewVacunados.Teléfono = Teléfono;
+            NewVacunados.Email = Email;
+            NewVacunados.Fecha = Fecha;
+            NewVacunados.Direccion = Direccion;
+            NewVacunados.Justificacion = Justificacion;
+
+            await service.AddVacunadosAsync(NewVacunados);
+            NewVacunados = new Vacunados();
+            await RefreshVacunados();
+
+            msj = "Gracias " + Nombre +" "+ Apellido + "Por llenar este formulario :)";
+
+        }
+        else
+        {
+            msj = "Algunos campos aun no se han completado";
+        }
+
+
     }
+
 
     Vacunados UpdateVacunados = new Vacunados();
     private void SetVacunadosForUpdate(Vacunados Vacunado)

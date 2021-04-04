@@ -12,105 +12,105 @@ namespace Tarea_9.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 1 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 2 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 3 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 4 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 5 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 6 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 7 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 8 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 9 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Tarea_9;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 10 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Tarea_9.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 11 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Tarea_9.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 12 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using System.Net;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 13 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using System.Collections.Generic;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 14 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Radzen;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 15 "C:\Users\Lusan\Desktop\Tarea9-P3\_Imports.razor"
+#line 15 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\_Imports.razor"
 using Radzen.Blazor;
 
 #line default
@@ -125,12 +125,26 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 164 "C:\Users\Lusan\Desktop\Tarea9-P3\Pages\Index.razor"
+#line 178 "C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\Pages\Index.razor"
       
     //Strings de los Select
     String provincia = "-- Sin seleccionar --";
     String TipoSangre = "-- Sin seleccionar --";
     String COVID = "-- Sin seleccionar --";
+
+    //String de los inputs
+    String Cedula = "";
+    String Nombre = "";
+    String Apellido = "";
+    String Teléfono = "";
+    String Email = "";
+    DateTime Fecha;
+    String Direccion = "";
+    String Justificacion = "";
+
+    String msj;
+
+
 
     //Metodos para manejar los Selects
     public void provincias(ChangeEventArgs e)
@@ -183,14 +197,48 @@ using Radzen.Blazor;
     public Vacunados NewVacunados { get; set; } = new Vacunados();
     private async Task AddNewVacunados()
     {
-        //Agrego los valores, seleccionados de los selects
-        NewVacunados.Provincia = provincia;
-        NewVacunados.TipoDeSangre = TipoSangre;
-        NewVacunados.COVID = COVID;
-        await service.AddVacunadosAsync(NewVacunados);
-        NewVacunados = new Vacunados();
-        await RefreshVacunados();
+
+        foreach (var Vacunado in Vacunados)
+        {
+            if(Vacunado.Cedula == Cedula)
+            {
+                msj = "Esta cedula ya esta registrada";
+                return;
+            }
+        }
+
+        if (Cedula != "" || Nombre != "" || Apellido != "" || Teléfono != "" || Email != "" || Direccion != "")
+        {
+
+            //Agrego los valores, seleccionados de los selects
+            NewVacunados.Provincia = provincia;
+            NewVacunados.TipoDeSangre = TipoSangre;
+            NewVacunados.COVID = COVID;
+
+            NewVacunados.Cedula = Cedula;
+            NewVacunados.Nombre = Nombre;
+            NewVacunados.Apellido = Apellido;
+            NewVacunados.Teléfono = Teléfono;
+            NewVacunados.Email = Email;
+            NewVacunados.Fecha = Fecha;
+            NewVacunados.Direccion = Direccion;
+            NewVacunados.Justificacion = Justificacion;
+
+            await service.AddVacunadosAsync(NewVacunados);
+            NewVacunados = new Vacunados();
+            await RefreshVacunados();
+
+            msj = "Gracias " + Nombre +" "+ Apellido + "Por llenar este formulario :)";
+
+        }
+        else
+        {
+            msj = "Algunos campos aun no se han completado";
+        }
+
+
     }
+
 
     Vacunados UpdateVacunados = new Vacunados();
     private void SetVacunadosForUpdate(Vacunados Vacunado)
