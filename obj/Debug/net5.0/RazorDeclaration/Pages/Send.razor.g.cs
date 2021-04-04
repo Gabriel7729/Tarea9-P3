@@ -116,14 +116,57 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Aserca")]
-    public partial class AsercaD : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Send.razor"
+using System.Net.Mail;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/sendi")]
+    public partial class Send : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 9 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Send.razor"
+      
+    private string Message {get; set;} = "";
+
+    private void SendMail()
+    {
+        try
+        {
+            using (MailMessage  mail = new MailMessage())
+            {
+                mail.From = new MailAddress("kentayiroma@gmail.com");
+                mail.To.Add("anthonyvaldezg9@gmail.com");
+                mail.Subject = "Solicitud de Prueba";
+                mail.Body = "<h1> Este es el cuerpo</h1>";
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new System.Net.NetworkCredential("kentayiroma@gmail.com","Lolxd551995*");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                    Message = "Mail enviado";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            
+            Message = ex.Message;
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

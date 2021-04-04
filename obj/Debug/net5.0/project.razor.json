@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Tarea 9.csproj",
+  "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Tarea 9.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -11,6 +11,72 @@
   },
   "ProjectWorkspaceState": {
     "TagHelpers": [
+      {
+        "HashCode": -707210193,
+        "Kind": "Components.Component",
+        "Name": "Tarea_9.Pages.AsercaD",
+        "AssemblyName": "Tarea 9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AsercaD"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea_9.Pages.AsercaD"
+        }
+      },
+      {
+        "HashCode": -1274966397,
+        "Kind": "Components.Component",
+        "Name": "Tarea_9.Pages.AsercaD",
+        "AssemblyName": "Tarea 9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Tarea_9.Pages.AsercaD"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea_9.Pages.AsercaD",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1420055757,
+        "Kind": "Components.Component",
+        "Name": "Tarea_9.Pages.FetchData",
+        "AssemblyName": "Tarea 9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea_9.Pages.FetchData"
+        }
+      },
+      {
+        "HashCode": 860923207,
+        "Kind": "Components.Component",
+        "Name": "Tarea_9.Pages.FetchData",
+        "AssemblyName": "Tarea 9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Tarea_9.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea_9.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
       {
         "HashCode": -278205424,
         "Kind": "Components.Component",
@@ -45,35 +111,35 @@
         }
       },
       {
-        "HashCode": 1420055757,
+        "HashCode": 1687353300,
         "Kind": "Components.Component",
-        "Name": "Tarea_9.Pages.FetchData",
+        "Name": "Tarea_9.Pages.Send",
         "AssemblyName": "Tarea 9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FetchData"
+            "TagName": "Send"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea_9.Pages.FetchData"
+          "Common.TypeName": "Tarea_9.Pages.Send"
         }
       },
       {
-        "HashCode": 860923207,
+        "HashCode": -1851856066,
         "Kind": "Components.Component",
-        "Name": "Tarea_9.Pages.FetchData",
+        "Name": "Tarea_9.Pages.Send",
         "AssemblyName": "Tarea 9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Tarea_9.Pages.FetchData"
+            "TagName": "Tarea_9.Pages.Send"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea_9.Pages.FetchData",
+          "Common.TypeName": "Tarea_9.Pages.Send",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -59753,53 +59819,63 @@
   "RootNamespace": "Tarea_9",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Shared\\SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Pages\\FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Pages\\Counter.razor",
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Pages\\Counter.razor",
       "TargetPath": "Pages\\Counter.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Pages\\Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Shared\\MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Pages\\Send.razor",
+      "TargetPath": "Pages\\Send.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Pages\\_Host.cshtml",
-      "TargetPath": "Pages\\_Host.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Pages\\Index.razor",
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Pages\\Index.razor",
       "TargetPath": "Pages\\Index.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\Lusan\\Desktop\\Tarea9-P3\\Shared\\NavMenu.razor",
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Shared\\NavMenu.razor",
       "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Shared\\SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Pages\\FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Pages\\_Host.cshtml",
+      "TargetPath": "Pages\\_Host.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Pages\\AsercaD.razor",
+      "TargetPath": "Pages\\AsercaD.razor",
       "FileKind": "component"
     }
   ],

@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tp9\\Tarea9-P3\\Tarea 9.csproj": {}
+    "C:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Tarea 9.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tp9\\Tarea9-P3\\Tarea 9.csproj": {
+    "C:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Tarea 9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tp9\\Tarea9-P3\\Tarea 9.csproj",
+        "projectUniqueName": "C:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Tarea 9.csproj",
         "projectName": "Tarea 9",
-        "projectPath": "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tp9\\Tarea9-P3\\Tarea 9.csproj",
-        "packagesPath": "C:\\Users\\LUIS ANTONIO DE AZA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LUIS ANTONIO DE AZA\\Desktop\\tp9\\Tarea9-P3\\obj\\",
+        "projectPath": "C:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Tarea 9.csproj",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\LUIS ANTONIO DE AZA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

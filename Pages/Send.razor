@@ -1,0 +1,39 @@
+@page "/sendi"
+@using System.Net.Mail;
+
+<h1>Prueba de envio</h1>
+<button class="btn btn-primary" @onclick="SendMail">Enviar</button>
+<br />
+<span style="font-weight: bold;font-size: 28px;color: #c00;">@Message </span>
+
+@code{
+    private string Message {get; set;} = "";
+
+    private void SendMail()
+    {
+        try
+        {
+            using (MailMessage  mail = new MailMessage())
+            {
+                mail.From = new MailAddress("kentayiroma@gmail.com");
+                mail.To.Add("anthonyvaldezg9@gmail.com");
+                mail.Subject = "Solicitud de Prueba";
+                mail.Body = "<h1> Este es el cuerpo</h1>";
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new System.Net.NetworkCredential("kentayiroma@gmail.com","Lolxd551995*");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                    Message = "Mail enviado";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            
+            Message = ex.Message;
+        }
+    }
+}

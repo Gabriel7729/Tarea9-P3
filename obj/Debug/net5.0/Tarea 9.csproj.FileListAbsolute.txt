@@ -264,3 +264,95 @@ C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.pdb
 C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.genruntimeconfig.cache
 C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Pages\AsercaD.razor.g.cs
 C:\Users\LUIS ANTONIO DE AZA\Desktop\tp9\Tarea9-P3\obj\Debug\net5.0\Razor\Pages\AsercaD.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\appsettings.json
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Tarea 9.StaticWebAssets.xml
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Tarea 9.exe
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Tarea 9.deps.json
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Tarea 9.runtimeconfig.json
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Tarea 9.runtimeconfig.dev.json
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Tarea 9.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\ref\Tarea 9.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Tarea 9.pdb
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Tarea 9.Views.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Tarea 9.Views.pdb
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Humanizer.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Microsoft.Data.Sqlite.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Radzen.Blazor.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\SQLitePCLRaw.nativelibrary.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\SQLitePCLRaw.core.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.csprojAssemblyReference.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.AssemblyInfoInputs.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.AssemblyInfo.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.csproj.CoreCompileInputs.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.RazorComponent.input.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Pages\AsercaD.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.RazorComponent.output.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Tarea 9.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.TagHelpers.input.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.TagHelpers.output.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.RazorCoreGenerate.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\App.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Pages\AsercaD.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Pages\_Host.cshtml.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.RazorAssemblyInfo.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.RazorAssemblyInfo.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\staticwebassets\Tarea 9.StaticWebAssets.Manifest.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\staticwebassets\Tarea 9.StaticWebAssets.xml
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\scopedcss\bundle\Tarea 9.styles.css
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\scopedcss\projectbundle\Tarea 9.bundle.scp.css
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.RazorTargetAssemblyInfo.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.RazorTargetAssemblyInfo.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.Views.pdb
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.csproj.CopyComplete
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\ref\Tarea 9.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.pdb
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.genruntimeconfig.cache
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Pages\Send.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Pages\Send.razor.g.cs
