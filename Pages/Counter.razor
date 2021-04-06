@@ -1,5 +1,9 @@
 ﻿@page "/ListadoRegistros"
+@using Tarea_9.Data
 @inject VacunadosServices service
+@inject ExportService ExportService
+@inject Microsoft.JSInterop.IJSRuntime js
+@using System.IO;
 
 <div>
     <h2 class="text-center"><strong>Listado de Vacunados en casa</strong></h2>
@@ -20,6 +24,7 @@
                 <th>Longitud</th>
                 <th>COVID-19</th>
                 <th>Justificación</th>
+                <th>Accion</th>
             </tr>
         </thead>
         <tbody>
@@ -48,6 +53,7 @@
     </table>
 </div>
 
+
 @code {
     //Metodos para manejar la Base de Datos
     List<Vacunados> Vacunados = new List<Vacunados>();
@@ -55,6 +61,14 @@
     {
         await RefreshVacunados();
     }
+
+    /*protected async Task ExportToPdf()
+    {
+      using (MemoryStream memory = ExportService.CreatePdf(vacuna))
+      {
+          await js.SaveAs("Sample.pdf" , memory.ToArray());
+      }
+    }*/
 
     private async Task RefreshVacunados()
     {
@@ -86,4 +100,5 @@
         await service.DeleteVacunadosAsync(Vacunado);
         await RefreshVacunados();
     }
+
 }

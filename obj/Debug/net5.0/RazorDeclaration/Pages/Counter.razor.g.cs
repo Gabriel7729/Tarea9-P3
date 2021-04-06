@@ -82,13 +82,6 @@ using Tarea_9.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
-using Tarea_9.Data;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 12 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
 using System.Net;
 
@@ -116,6 +109,20 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Counter.razor"
+using Tarea_9.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Counter.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/ListadoRegistros")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -125,7 +132,7 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 51 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Counter.razor"
+#line 57 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Counter.razor"
        
     //Metodos para manejar la Base de Datos
     List<Vacunados> Vacunados = new List<Vacunados>();
@@ -133,6 +140,14 @@ using Radzen.Blazor;
     {
         await RefreshVacunados();
     }
+
+    /*protected async Task ExportToPdf()
+    {
+      using (MemoryStream memory = ExportService.CreatePdf(vacuna))
+      {
+          await js.SaveAs("Sample.pdf" , memory.ToArray());
+      }
+    }*/
 
     private async Task RefreshVacunados()
     {
@@ -165,9 +180,12 @@ using Radzen.Blazor;
         await RefreshVacunados();
     }
 
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Microsoft.JSInterop.IJSRuntime js { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ExportService ExportService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private VacunadosServices service { get; set; }
     }
 }

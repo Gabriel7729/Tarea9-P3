@@ -30,6 +30,7 @@ namespace Tarea_9
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<ExportService>();
 
             services.AddDbContext<VacunadosDbContext>(options =>
             {

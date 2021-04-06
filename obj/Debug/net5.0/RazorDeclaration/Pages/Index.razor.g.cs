@@ -116,6 +116,13 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Index.razor"
+using System.Net.Mail;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -125,7 +132,7 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 178 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Index.razor"
+#line 179 "C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Index.razor"
       
     //Strings de los Select
     String provincia = "-- Sin seleccionar --";
@@ -210,7 +217,7 @@ using Radzen.Blazor;
         //valida que los campos esten llenos
         if (Cedula != "" || Nombre != "" || Apellido != "" || Teléfono != "" || Email != "" || Direccion != "")
         {
-
+            SendMail(Cedula, Nombre, Apellido, Teléfono, Email, Fecha, TipoSangre, provincia, Direccion, COVID, Justificacion);
             //Agrego los valores, seleccionados de los selects
             NewVacunados.Provincia = provincia;
             NewVacunados.TipoDeSangre = TipoSangre;
@@ -230,6 +237,7 @@ using Radzen.Blazor;
             await RefreshVacunados();
 
             msj = "Gracias " + Nombre +" "+ Apellido + "Por llenar este formulario :)";
+            Vacio();
 
         }
         else
@@ -257,6 +265,65 @@ using Radzen.Blazor;
     {
         await service.DeleteVacunadosAsync(Vacunado);
         await RefreshVacunados();
+    }
+
+     private string Message {get; set;} = "";
+
+    private void SendMail(string Cedula, string Nombre, string Apellido, string Teléfono, string Email, DateTime Fecha, string TipoDeSangre, string Provincia, string Direccion, string COVID, string Justificacion)
+    {
+        try
+        {
+            using (MailMessage  mail = new MailMessage())
+            {
+                mail.From = new MailAddress("kentayiroma@gmail.com"); //Este es el correo que envial el mensaje
+                mail.To.Add(Email); //Este es el correo que lo recibe
+                mail.Subject = "Solicitud de Prueba de Covid"; //El asunto
+                mail.Body = $"<h1>Hola {Nombre} </h1>" 
+                + $"<h4>Cedula: {Cedula}</h4>" 
+                + $"<h4>Nombre: {Nombre}</h4> "  
+                + $"<h4>Apellido: {Apellido}</h4>" 
+                + $"<h4>Telefono: {Teléfono}</h4>" 
+                + $"<h4>Email : {Email}</h4>" 
+                + $"<h4>Fecha: {Fecha}</h4>" 
+                + $"<h4>Tipo de sangre : {TipoDeSangre}</h4>" 
+                + $"<h4>Provincia: {Provincia}</h4>" 
+                + $"<h4>Direccion: {Direccion}</h4>" 
+                + $"<h4>Te dio covid: {COVID}</h4>" 
+                + $"<h4>¿Por que te quieres vacunar? {Justificacion}</h4>"; //Lo que contiene el mensaje
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new System.Net.NetworkCredential("kentayiroma@gmail.com","CoolMedussa55");//necesita el correo y la clave para que pueda enviar el correo
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                    Message = "Mail enviado";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            
+            Message = ex.Message;
+        }
+    }
+
+    public void Vacio()
+    {
+        Cedula ="";
+        Nombre = "";
+        Apellido ="";
+        Teléfono ="";
+        Email ="";
+        Direccion = "";
+        TipoSangre = "-- Sin seleccionar --";
+        provincia = "-- Sin seleccionar --";
+        COVID = "";
+        Justificacion = "";
+
+
+
+
     }
 
 #line default

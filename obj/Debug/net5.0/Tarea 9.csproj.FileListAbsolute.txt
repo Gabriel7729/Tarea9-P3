@@ -356,3 +356,6 @@ C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.p
 C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Tarea 9.genruntimeconfig.cache
 C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\RazorDeclaration\Pages\Send.razor.g.cs
 C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\obj\Debug\net5.0\Razor\Pages\Send.razor.g.cs
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Syncfusion.Compression.Portable.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Syncfusion.Licensing.dll
+C:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\bin\Debug\net5.0\Syncfusion.Pdf.Portable.dll

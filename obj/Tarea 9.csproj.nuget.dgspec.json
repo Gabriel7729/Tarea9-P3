@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[3.1.9, )"
             },
+            "Syncfusion.Pdf.Net.Core": {
+              "target": "Package",
+              "version": "[19.1.0.54, )"
+            },
             "System.ComponentModel.Annotations": {
               "target": "Package",
               "version": "[5.0.0, )"

@@ -142,15 +142,15 @@ using System.Net.Mail;
         {
             using (MailMessage  mail = new MailMessage())
             {
-                mail.From = new MailAddress("kentayiroma@gmail.com");
-                mail.To.Add("anthonyvaldezg9@gmail.com");
-                mail.Subject = "Solicitud de Prueba";
-                mail.Body = "<h1> Este es el cuerpo</h1>";
+                mail.From = new MailAddress("kentayiroma@gmail.com"); //Este es el correo que envial el mensaje
+                mail.To.Add("anthonyvaldezg9@gmail.com"); //Este es el correo que lo recibe
+                mail.Subject = "Solicitud de Prueba"; //El asunto
+                mail.Body = "<h1> Este es el cuerpo</h1>"; //Lo que contiene el mensaje
                 mail.IsBodyHtml = true;
 
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtp.Credentials = new System.Net.NetworkCredential("kentayiroma@gmail.com","Lolxd551995*");
+                    smtp.Credentials = new System.Net.NetworkCredential("kentayiroma@gmail.com","Lolxd551995*");//necesita el correo y la clave para que pueda enviar el correo
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                     Message = "Mail enviado";

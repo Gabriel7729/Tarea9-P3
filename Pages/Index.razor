@@ -1,5 +1,6 @@
 ﻿@page "/"
 @inject VacunadosServices service
+@using System.Net.Mail; 
 
 <section class="container-fluid">
     <div class="row">
@@ -128,7 +129,7 @@
                 <div class="form-group">
                     <label for="Justificacion">Justificacion:</label>
                     <input id="Justificacion" class="form-control" @bind="@Justificacion"></input>
-                    <ValidationMessage For="@(() => NewVacunados.Justificacion)" />
+                    <ValidationMessage For="@(() => NewVacunados.Justificacion)"/>
                 </div>
 
 
@@ -259,7 +260,7 @@
         //valida que los campos esten llenos
         if (Cedula != "" || Nombre != "" || Apellido != "" || Teléfono != "" || Email != "" || Direccion != "")
         {
-
+            SendMail(Cedula, Nombre, Apellido, Teléfono, Email, Fecha, TipoSangre, provincia, Direccion, COVID, Justificacion);
             //Agrego los valores, seleccionados de los selects
             NewVacunados.Provincia = provincia;
             NewVacunados.TipoDeSangre = TipoSangre;
@@ -279,6 +280,7 @@
             await RefreshVacunados();
 
             msj = "Gracias " + Nombre +" "+ Apellido + "Por llenar este formulario :)";
+            Vacio();
 
         }
         else
@@ -306,5 +308,64 @@
     {
         await service.DeleteVacunadosAsync(Vacunado);
         await RefreshVacunados();
+    }
+
+     private string Message {get; set;} = "";
+
+    private void SendMail(string Cedula, string Nombre, string Apellido, string Teléfono, string Email, DateTime Fecha, string TipoDeSangre, string Provincia, string Direccion, string COVID, string Justificacion)
+    {
+        try
+        {
+            using (MailMessage  mail = new MailMessage())
+            {
+                mail.From = new MailAddress("kentayiroma@gmail.com"); //Este es el correo que envial el mensaje
+                mail.To.Add(Email); //Este es el correo que lo recibe
+                mail.Subject = "Solicitud de Prueba de Covid"; //El asunto
+                mail.Body = $"<h1>Hola {Nombre} </h1>" 
+                + $"<h4>Cedula: {Cedula}</h4>" 
+                + $"<h4>Nombre: {Nombre}</h4> "  
+                + $"<h4>Apellido: {Apellido}</h4>" 
+                + $"<h4>Telefono: {Teléfono}</h4>" 
+                + $"<h4>Email : {Email}</h4>" 
+                + $"<h4>Fecha: {Fecha}</h4>" 
+                + $"<h4>Tipo de sangre : {TipoDeSangre}</h4>" 
+                + $"<h4>Provincia: {Provincia}</h4>" 
+                + $"<h4>Direccion: {Direccion}</h4>" 
+                + $"<h4>Te dio covid: {COVID}</h4>" 
+                + $"<h4>¿Por que te quieres vacunar? {Justificacion}</h4>"; //Lo que contiene el mensaje
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new System.Net.NetworkCredential("kentayiroma@gmail.com","CoolMedussa55");//necesita el correo y la clave para que pueda enviar el correo
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                    Message = "Mail enviado";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            
+            Message = ex.Message;
+        }
+    }
+
+    public void Vacio()
+    {
+        Cedula ="";
+        Nombre = "";
+        Apellido ="";
+        Teléfono ="";
+        Email ="";
+        Direccion = "";
+        TipoSangre = "-- Sin seleccionar --";
+        provincia = "-- Sin seleccionar --";
+        COVID = "";
+        Justificacion = "";
+
+
+
+
     }
 }
