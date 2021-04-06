@@ -1786,23 +1786,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\a\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Lusan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Tarea 9.csproj",
+      "projectUniqueName": "C:\\Users\\Lusan\\Downloads\\Tarea9-P3\\Tarea9-P3\\Tarea 9.csproj",
       "projectName": "Tarea 9",
-      "projectPath": "C:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\Tarea 9.csproj",
-      "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\a\\Downloads\\ITLA-seaon 6\\Prog 3\\T9\\Tarea9-P3\\obj\\",
+      "projectPath": "C:\\Users\\Lusan\\Downloads\\Tarea9-P3\\Tarea9-P3\\Tarea 9.csproj",
+      "packagesPath": "C:\\Users\\Lusan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lusan\\Downloads\\Tarea9-P3\\Tarea9-P3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lusan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1870,7 +1875,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

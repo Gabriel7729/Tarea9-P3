@@ -4,7 +4,8 @@
 
 <section class="container-fluid">
     <div class="row">
-        <div class="col-md-6 justify-content-center">
+        <div class="col-md-6">
+            <RadzenCard>
             <h2 class="text-center"><strong>Registro de Vacunados en casa</strong></h2>
             <br />
             <EditForm Model="@NewVacunados" OnValidSubmit="AddNewVacunados">
@@ -128,7 +129,7 @@
 
                 <div class="form-group">
                     <label for="Justificacion">Justificacion:</label>
-                    <input id="Justificacion" class="form-control" @bind="@Justificacion"></input>
+                    <input id="Justificacion" class="form-control" @bind="@Justificacion" />
                     <ValidationMessage For="@(() => NewVacunados.Justificacion)"/>
                 </div>
 
@@ -138,14 +139,14 @@
                 </div>
 
             </EditForm>
-          
+          </RadzenCard>
 
         </div>
 
         <div class="col-md-6">
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <h3 class="text-center"><strong>Seleccione su Latitud y Longitud:</strong></h3>
             <RadzenCard>
+                <h3 class="text-center"><strong>Seleccione su Latitud y Longitud:</strong></h3>
                 <RadzenGoogleMap style="height: 400px" Zoom=@zoom Center=@(new GoogleMapPosition() { Lat = 18.85609639745414, Lng = -71.0287898238766 }) MapClick=@OnMapClick MarkerClick=@OnMarkerClick>
                     <Markers>
                         @foreach (var Vacunado in Vacunados)
@@ -165,16 +166,17 @@
 
 
 </section>
-<div class="alert alert-info text-center">@msj</div>
 
-<footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center text-white p-3" style="background-color:black;color:white);">
-        Acerca de :
-        <a class="text-white" href="Aserca">Grupo super trabajador E</a>
-    </div>
-    <!-- Copyright -->
-</footer>
+@if (vali)
+{
+    <div class="alert alert-info text-center">@msj</div>
+}
+
+@if (vali2)
+{
+    <div class="alert alert-danger text-center">@msj</div>
+}
+
 <span style="font-weight: bold;font-size: 28px;color: #c00;">@Message </span>
 
 @code{
@@ -195,7 +197,8 @@
 
     String msj;
 
-
+    bool vali = false;
+    bool vali2 = false;
 
     //Metodos para manejar los Selects
     public void provincias(ChangeEventArgs e)
@@ -280,12 +283,16 @@
             NewVacunados = new Vacunados();
             await RefreshVacunados();
 
-            msj = "Gracias " + Nombre +" "+ Apellido + "Por llenar este formulario :)";
+            msj = "Gracias " + Nombre +" "+ Apellido + " por llenar este formulario :)";
+            vali2 = false;
+            vali = true;
             Vacio();
 
         }
         else
         {
+            vali = false;
+            vali2 = true;
             msj = "Algunos campos aun no se han completado";
         }
 

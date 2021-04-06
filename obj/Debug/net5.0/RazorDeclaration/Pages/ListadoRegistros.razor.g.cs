@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Tarea_9.Shared
+namespace Tarea_9.Pages
 {
     #line hidden
     using System;
@@ -82,13 +82,6 @@ using Tarea_9.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
-using Tarea_9.Data;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 12 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using System.Net;
 
@@ -116,7 +109,22 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\Pages\ListadoRegistros.razor"
+using Tarea_9.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\Pages\ListadoRegistros.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/ListadoRegistros")]
+    public partial class ListadoRegistros : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -124,15 +132,61 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\Shared\SurveyPrompt.razor"
+#line 58 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\Pages\ListadoRegistros.razor"
        
-    // Demonstrates how a parent component can supply parameters
-    [Parameter]
-    public string Title { get; set; }
+    //Metodos para manejar la Base de Datos
+    List<Vacunados> Vacunados = new List<Vacunados>();
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshVacunados();
+    }
+
+    /*protected async Task ExportToPdf()
+    {
+      using (MemoryStream memory = ExportService.CreatePdf(vacuna))
+      {
+          await js.SaveAs("Sample.pdf" , memory.ToArray());
+      }
+    }*/
+
+    private async Task RefreshVacunados()
+    {
+        Vacunados = await service.GetVacunadosAsync();
+    }
+
+    public Vacunados NewVacunados { get; set; } = new Vacunados();
+    private async Task AddNewVacunados()
+    {
+        await service.AddVacunadosAsync(NewVacunados);
+        NewVacunados = new Vacunados();
+        await RefreshVacunados();
+    }
+
+    Vacunados UpdateVacunados = new Vacunados();
+    private void SetVacunadosForUpdate(Vacunados Vacunado)
+    {
+        UpdateVacunados = Vacunado;
+    }
+
+    private async Task UpdateVacunadosData()
+    {
+        await service.UpdateVacunadosAsync(UpdateVacunados);
+        await RefreshVacunados();
+    }
+
+    private async Task DeleteVacunados(Vacunados Vacunado)
+    {
+        await service.DeleteVacunadosAsync(Vacunado);
+        await RefreshVacunados();
+    }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Microsoft.JSInterop.IJSRuntime js { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ExportService ExportService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private VacunadosServices service { get; set; }
     }
 }
 #pragma warning restore 1591

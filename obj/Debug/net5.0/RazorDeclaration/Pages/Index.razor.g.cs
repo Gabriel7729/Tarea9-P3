@@ -12,112 +12,112 @@ namespace Tarea_9.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 1 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 2 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 3 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 4 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 5 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 6 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 7 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 8 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 9 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Tarea_9;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 10 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Tarea_9.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 11 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Tarea_9.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 12 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using System.Net;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 13 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using System.Collections.Generic;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 14 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Radzen;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 15 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\_Imports.razor"
+#line 15 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\_Imports.razor"
 using Radzen.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Index.razor"
+#line 3 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\Pages\Index.razor"
 using System.Net.Mail;
 
 #line default
@@ -132,7 +132,7 @@ using System.Net.Mail;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 179 "c:\Users\a\Downloads\ITLA-seaon 6\Prog 3\T9\Tarea9-P3\Pages\Index.razor"
+#line 182 "C:\Users\Lusan\Downloads\Tarea9-P3\Tarea9-P3\Pages\Index.razor"
       
     //Strings de los Select
     String provincia = "-- Sin seleccionar --";
@@ -151,7 +151,8 @@ using System.Net.Mail;
 
     String msj;
 
-
+    bool vali = false;
+    bool vali2 = false;
 
     //Metodos para manejar los Selects
     public void provincias(ChangeEventArgs e)
@@ -236,12 +237,16 @@ using System.Net.Mail;
             NewVacunados = new Vacunados();
             await RefreshVacunados();
 
-            msj = "Gracias " + Nombre +" "+ Apellido + "Por llenar este formulario :)";
+            msj = "Gracias " + Nombre +" "+ Apellido + " por llenar este formulario :)";
+            vali2 = false;
+            vali = true;
             Vacio();
 
         }
         else
         {
+            vali = false;
+            vali2 = true;
             msj = "Algunos campos aun no se han completado";
         }
 
@@ -294,7 +299,7 @@ using System.Net.Mail;
 
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtp.Credentials = new System.Net.NetworkCredential("kentayiroma@gmail.com","CoolMedussa55");//necesita el correo y la clave para que pueda enviar el correo
+                    smtp.Credentials = new System.Net.NetworkCredential("superequioe@gmail.com","superequipoE4");//necesita el correo y la clave para que pueda enviar el correo
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                     Message = "Mail enviado";

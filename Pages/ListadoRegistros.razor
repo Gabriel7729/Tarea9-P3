@@ -1,0 +1,105 @@
+﻿@page "/ListadoRegistros"
+@using Tarea_9.Data
+@inject VacunadosServices service
+@inject ExportService ExportService
+@inject Microsoft.JSInterop.IJSRuntime js
+@using System.IO;
+
+<RadzenCard>
+    <header>
+        <h1 class="text-center"><strong>Listado de Vacunados en casa</strong></h1>
+    </header>
+
+    <br />
+
+    <section class="container-fluid">
+        <center>
+
+            <div class="row">
+                @if (Vacunados.Any())
+                {
+                    @foreach (var Vacun in Vacunados)
+                    {
+                        <div class="col-md-6">
+                            <div class="card" style="width:26rem;">
+                                <div class="card-body">
+                                    <h4 class="card-title">@Vacun.Nombre @Vacun.Apellido</h4>
+                                    <p class="card-text">
+                                        Quiere vacunarse en casa porque: @Vacun.Justificacion
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><strong>Cedula: </strong>@Vacun.Cedula</li>
+                                    <li class="list-group-item"><strong>Teléfono: </strong>@Vacun.Teléfono</li>
+                                    <li class="list-group-item"><strong>Email: </strong>@Vacun.Email</li>
+                                    <li class="list-group-item"><strong>Fecha: </strong>@Vacun.Fecha.ToString("MM/dd/yyyy")</li>
+                                    <li class="list-group-item"><strong>Tipo de Sangre: </strong>@Vacun.TipoDeSangre</li>
+                                    <li class="list-group-item"><strong>Provincia: </strong>@Vacun.Provincia</li>
+                                    <li class="list-group-item"><strong>Dirección: </strong>@Vacun.Direccion</li>
+                                    <li class="list-group-item"><strong>Ha tenido COVID-19: </strong>@Vacun.COVID</li>
+                                </ul>
+                                <div class="card-body">
+                                    <button class="btn btn-danger" @onclick="(() => DeleteVacunados(Vacun))">Eliminar</button>
+                                </div>
+                            </div>
+                            <br /><br />
+                        </div>
+                    }
+                }
+            </div>
+
+        </center>
+    </section>
+</RadzenCard>
+<br />
+<br />
+
+
+@code {
+    //Metodos para manejar la Base de Datos
+    List<Vacunados> Vacunados = new List<Vacunados>();
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshVacunados();
+    }
+
+    /*protected async Task ExportToPdf()
+    {
+      using (MemoryStream memory = ExportService.CreatePdf(vacuna))
+      {
+          await js.SaveAs("Sample.pdf" , memory.ToArray());
+      }
+    }*/
+
+    private async Task RefreshVacunados()
+    {
+        Vacunados = await service.GetVacunadosAsync();
+    }
+
+    public Vacunados NewVacunados { get; set; } = new Vacunados();
+    private async Task AddNewVacunados()
+    {
+        await service.AddVacunadosAsync(NewVacunados);
+        NewVacunados = new Vacunados();
+        await RefreshVacunados();
+    }
+
+    Vacunados UpdateVacunados = new Vacunados();
+    private void SetVacunadosForUpdate(Vacunados Vacunado)
+    {
+        UpdateVacunados = Vacunado;
+    }
+
+    private async Task UpdateVacunadosData()
+    {
+        await service.UpdateVacunadosAsync(UpdateVacunados);
+        await RefreshVacunados();
+    }
+
+    private async Task DeleteVacunados(Vacunados Vacunado)
+    {
+        await service.DeleteVacunadosAsync(Vacunado);
+        await RefreshVacunados();
+    }
+
+}
