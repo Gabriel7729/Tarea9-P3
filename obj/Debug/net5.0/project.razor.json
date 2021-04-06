@@ -45,39 +45,6 @@
         }
       },
       {
-        "HashCode": 1420055757,
-        "Kind": "Components.Component",
-        "Name": "Tarea_9.Pages.FetchData",
-        "AssemblyName": "Tarea 9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea_9.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": 860923207,
-        "Kind": "Components.Component",
-        "Name": "Tarea_9.Pages.FetchData",
-        "AssemblyName": "Tarea 9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Tarea_9.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea_9.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -278205424,
         "Kind": "Components.Component",
         "Name": "Tarea_9.Pages.Counter",
@@ -111,6 +78,39 @@
         }
       },
       {
+        "HashCode": 1420055757,
+        "Kind": "Components.Component",
+        "Name": "Tarea_9.Pages.FetchData",
+        "AssemblyName": "Tarea 9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea_9.Pages.FetchData"
+        }
+      },
+      {
+        "HashCode": 860923207,
+        "Kind": "Components.Component",
+        "Name": "Tarea_9.Pages.FetchData",
+        "AssemblyName": "Tarea 9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Tarea_9.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea_9.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1687353300,
         "Kind": "Components.Component",
         "Name": "Tarea_9.Pages.Send",
@@ -140,39 +140,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Tarea_9.Pages.Send",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1929002578,
-        "Kind": "Components.Component",
-        "Name": "Tarea_9.Pages.Index",
-        "AssemblyName": "Tarea 9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea_9.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 184235062,
-        "Kind": "Components.Component",
-        "Name": "Tarea_9.Pages.Index",
-        "AssemblyName": "Tarea 9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Tarea_9.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea_9.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
